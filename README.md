@@ -9,3 +9,17 @@ An SDRAM Controller is a hardware block that:
 
 ---
 
+## How does a DRAM work?
+
+The fundamental memory cell within a DRAM consists of a transistor and a capacitor. 
+
+When you want to **write** to a memory cell:
+- Enable the Wordline
+- Apply VDD/GND on the Bitline
+
+ When you want to **read** from a memory cell:
+- Precharge Bitline to VDD/2
+- Enable Wordline
+- Sense value on the Bitline
+- Apply Refresh 
+
