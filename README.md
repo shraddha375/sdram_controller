@@ -1,1 +1,1 @@
-# sdram_controller
+# SDRAM Controller
