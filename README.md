@@ -33,7 +33,7 @@ When you want to **write** to a memory cell:
 
 Read is a destructive process because it removes or adds extra charge to the capacitor. Hence we need to perform refresh which essentially restores the original charge on the capacitor. This is usually done by reading the cell value and writing the same value back.
 
-Switches are made from transisitors and over a period of time the charges on the capapcitirs leak. To ensure data integrity, we need to perform refresh periodically.
+Switches are made from transistors and over a period of time the charges on the capapcitirs leak. To ensure data integrity, we need to perform refresh periodically.
 
 There are two types of refresh: 
 - *Auto-Refresh*: Refreshes the capacitors during a normal operation with the SDRAM
