@@ -27,7 +27,9 @@ When you want to **write** to a memory cell:
 - Sense value on the Bitline
 - Apply Refresh 
 
-<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_3.jpg" width=50% height=50% align="center">
+<p align="center">
+ <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_3.jpg" width=50% height=50%>
+</p>
 
 ## Concept of Refresh
 
