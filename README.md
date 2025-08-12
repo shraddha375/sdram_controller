@@ -28,6 +28,7 @@ When you want to **write** to a memory cell:
 - Apply Refresh 
 
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_3.jpg" width=50% height=50%>
+
 ## Concept of Refresh
 
 Read is a destructive process because it removes or adds extra charge to the capacitor. Hence we need to perform refresh which essentially restores the original charge on the capacitor. This is usually done by reading the cell value and writing the same value back.
@@ -43,19 +44,20 @@ There are two types of refresh:
 ### First Generation of DRAM
 
 The first generation of DRAM looks like this as shown below: 
-![DRAM CELL](https://github.com/shraddha375/sdram_controller/blob/main/images/image_4.jpg)
 
-![DRAM CELL](https://github.com/shraddha375/sdram_controller/blob/main/images/image_5.jpg)
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_4.jpg" width=50% height=50%>
 
-![DRAM CELL](https://github.com/shraddha375/sdram_controller/blob/main/images/image_6.jpg)
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_5.jpg" width=50% height=50%>
 
-![DRAM CELL](https://github.com/shraddha375/sdram_controller/blob/main/images/image_7.jpg)
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_6.jpg" width=50% height=50%>
 
-![DRAM CELL](https://github.com/shraddha375/sdram_controller/blob/main/images/image_8.jpg)
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_7.jpg" width=50% height=50%>
 
-![DRAM CELL](https://github.com/shraddha375/sdram_controller/blob/main/images/image_9.jpg)
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_8.jpg" width=50% height=50%>
 
-![DRAM CELL](https://github.com/shraddha375/sdram_controller/blob/main/images/image_10.jpg)
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_9.jpg" width=50% height=50%>
+
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_10.jpg" width=50% height=50%>
 
 
 
