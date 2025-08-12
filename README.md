@@ -14,7 +14,7 @@ An SDRAM Controller is a hardware block that:
 The fundamental memory cell within a DRAM consists of a transistor and a capacitor. 
 
 ![DRAM CELL](https://github.com/shraddha375/sdram_controller/blob/main/images/image_1.jpg)
-<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_1.jpg" width="200">
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_1.jpg" width=50% height=50%>
 
 When you want to **write** to a memory cell:
 - Enable the Wordline
