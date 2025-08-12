@@ -44,7 +44,19 @@ There are two types of refresh:
 ### First Generation of DRAM
 
 The first generation of DRAM looks like this as shown below: 
+![DRAM CELL](https://github.com/shraddha375/sdram_controller/blob/main/images/image_4.jpg)
 
+![DRAM CELL](https://github.com/shraddha375/sdram_controller/blob/main/images/image_5.jpg)
+
+![DRAM CELL](https://github.com/shraddha375/sdram_controller/blob/main/images/image_6.jpg)
+
+![DRAM CELL](https://github.com/shraddha375/sdram_controller/blob/main/images/image_7.jpg)
+
+![DRAM CELL](https://github.com/shraddha375/sdram_controller/blob/main/images/image_8.jpg)
+
+![DRAM CELL](https://github.com/shraddha375/sdram_controller/blob/main/images/image_9.jpg)
+
+![DRAM CELL](https://github.com/shraddha375/sdram_controller/blob/main/images/image_10.jpg)
 
 
 
