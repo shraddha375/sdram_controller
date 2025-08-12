@@ -56,7 +56,7 @@ The first generation of DRAM looks like this as shown below:
 </p>
 
 <p align="center">
-<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_6.jpg" width=50% height=50%>
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_6.jpg" width=25% height=25%>
 </p>
 
 <p align="center">
