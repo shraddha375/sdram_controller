@@ -51,7 +51,7 @@ The first generation of DRAM looks like this as shown below:
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_4.jpg" width=50% height=50%>
 </p>
 
-Inside the cell matrix, it looks something like this:
+Inside the cell matrix, each memory bit uses one of the many outputs from Row and Column decoders:
 
 <p align="center">
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_5.jpg" width=50% height=50%>
@@ -69,6 +69,8 @@ In an actual 1st generation DRAM, each cell conists of 3 transistors:
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_10.jpg" width=50% height=50%>
 </p>
 
+The main drawback of using the 3-transistor DRAM cell is that it requires two pairs of column and rowlines. This consumes large klayout area. Modern DRAM cells use only 1-transistor and 1-capacitor.
+When we want to carry out a Write operation, Write rowline is high. M1 transistor turns on and whatever data present is on the Write columnline is passed to the gate of M2. the information either discharges or charges the input capacitance at the gate of M2. If we want to carry out a READ operation, precharge the Read columnline to a known value and then driving the Row rowline to high.  
 
 #### READ Operation
 
