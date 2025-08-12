@@ -19,7 +19,7 @@ When you want to **write** to a memory cell:
 - Enable the Wordline
 - Apply VDD/GND on the Bitline
 
-![DRAM CELL](https://github.com/shraddha375/sdram_controller/blob/main/images/image_2.jpg)
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_2.jpg" width=100% height=100%>
 
  When you want to **read** from a memory cell:
 - Precharge Bitline to VDD/2
