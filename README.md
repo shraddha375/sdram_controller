@@ -113,6 +113,36 @@ Here C̅E̅ is made HIGH while R/W̅  is used as a clock signal. To refresh the 
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_9.jpg" width=50% height=50%>
 </p>
 
+### Second Generation of DRAM
+
+We distinguish 2nd generation DRAMs from 1st generation DRAMs by the introduction of multiplexed address inputs, multi-memory arrays, and the 1-transistor/1-capacitor memory cell.
+
+**Difference 1**
+<p align="center">
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_9.jpg" width=50% height=50%>
+</p>
+
+**Difference 2**
+
+<p align="center">
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_9.jpg" width=50% height=50%>
+</p>
+
+We cannot go on increasing the number of transistors like this, because when wordline is enabled, it needs to travel long distance (increases resistance and capacitance; reducing frequency of operation). Instead we use arrays as follows:
+
+<p align="center">
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_9.jpg" width=50% height=50%>
+</p>
+
+**Difference 3**
+
+We also multiplex our address inputs using R̅A̅S̅(Row Addresss Strobe) and C̅A̅S̅(Column Address Strobe), thus reducing the number of pins required. We use the same pins for row address and column address.
+
+
+
+
+
+### Third Generation of DRAM
 
 
 
