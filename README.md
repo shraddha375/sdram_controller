@@ -79,6 +79,8 @@ When we want to carry out a Write operation, Write rowline is made high. M1 tran
 
 The main drawback of using the 3-transistor DRAM cell is that it requires two pairs of column and rowlines. This consumes large layout area. Modern DRAM cells use only 1-transistor and 1-capacitor.
 
+First Generation DRAM does not have clock. For READ and WRITE operations, first row address is applied then column address is applied. For REFRESH operation, first column address is applied then row address is applied.
+
 #### READ Operation
 ---
 To read a bit, one applies the row and the column addres, then wait for the data to appear on the dout pin. 
