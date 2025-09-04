@@ -105,6 +105,8 @@ To read a bit, one applies the row and the column addres, then wait for the data
 
 #### REFRESH Operation
 ---
+Here C̅E̅ is made HIGH while R/W̅  is used as a clock signal. To refresh the DRAM, we periodically access the memory with every possible row address combination. The data is read out and then written back into the same location at full voltage. 
+
 <p align="center">
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_9.jpg" width=50% height=50%>
 </p>
