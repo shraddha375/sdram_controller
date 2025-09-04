@@ -55,6 +55,8 @@ The first generation of DRAM looks as shown below:
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_4.jpg" width=50% height=50%>
 </p>
 
+5 bits for determining the row within 32 rows and 5 bits for determining column within 32 coulmns.
+
 Inside the cell matrix, each memory bit uses one of the many outputs from Row and Column decoders:
 
 <p align="center">
