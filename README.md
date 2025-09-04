@@ -143,10 +143,14 @@ We also multiplex our address inputs using R̅A̅S̅(Row Addresss Strobe) and C�
 </p>
 
 
-
 ### Third Generation of DRAM
 
+<p align="center">
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_14.jpg" width=50% height=50%>
+</p>
 
+In third generation of DRAM, we have clock and hence it is called a Synchronous DRAM. It supports parallel memory operation. When one of the banks is doing preprocessing, other banks could be initiated for READ/WRITE.
 
+Here we work at command level instead of signal level, where the combination of different signals used for specific operation is grouped into a command. User needs to send the command, the controller will handle the translation of a command to the signal level.
 
 ## References
