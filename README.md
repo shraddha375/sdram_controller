@@ -146,7 +146,7 @@ We also multiplex our address inputs using R̅A̅S̅(Row Addresss Strobe) and C�
 ### Third Generation of DRAM
 
 <p align="center">
-<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_14.jpg" width=50% height=50%>
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_15.jpg" width=50% height=50%>
 </p>
 
 In third generation of DRAM, we have clock and hence it is called a Synchronous DRAM. It supports parallel memory operation. When one of the banks is doing preprocessing, other banks could be initiated for READ/WRITE.
