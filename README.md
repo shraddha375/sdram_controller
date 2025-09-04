@@ -80,7 +80,7 @@ When we want to carry out a Write operation, Write rowline is made high. M1 tran
 The main drawback of using the 3-transistor DRAM cell is that it requires two pairs of column and rowlines. This consumes large layout area. Modern DRAM cells use only 1-transistor and 1-capacitor.
 
 #### READ Operation
-
+---
 To read a bit, one applies the row and the column addres, then wait for the data to appear on the dout pin. 
 
 **Read cycle time(t<sub>RC</sub>)** : Specifies how fast the memory can be read.
@@ -92,7 +92,7 @@ To read a bit, one applies the row and the column addres, then wait for the data
 </p>
 
 #### WRITE Operation
-
+---
 **Write cycle time(t<sub>WC</sub>)** : Specifies the maximum frequency at which we can write data into the DRAM. 
 
 **Address to Write Delay time(t<sub>AW</sub>)** : Specifies the time between the address changing and R/W̅ input going LOW. 
@@ -104,7 +104,7 @@ To read a bit, one applies the row and the column addres, then wait for the data
 </p>
 
 #### REFRESH Operation
-
+---
 <p align="center">
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_9.jpg" width=50% height=50%>
 </p>
