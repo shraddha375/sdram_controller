@@ -43,6 +43,8 @@ There are two types of refresh:
 - *Auto-Refresh*: Refreshes the capacitors during a normal operation with the SDRAM
 - *Self-Refresh*: Refreshes the SDRAM in a power down mode when the clock enable is 0.
 
+To give an example, let's say we have 4096 rows in a DRAM and we need to perform refresh for all the rows within 64 ms. That means each row needs to be refreshed in 64 ms/4096 = 15.62 us.
+
 ## Generations of DRAM
 
 ### First Generation of DRAM
