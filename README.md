@@ -83,9 +83,9 @@ The main drawback of using the 3-transistor DRAM cell is that it requires two pa
 
 To read a bit, one applies the row and the column addres, then wait for the data to appear on the dout pin. 
 
-Read cycle time(t<sub>RC</sub>) : Specifies how fast the memory can be read.
+**Read cycle time(t<sub>RC</sub>)** : Specifies how fast the memory can be read.
 
-Access time (t<sub>AC</sub>) : Specifies maximum length of time after the input address is changed before the output data is valid.
+**Access time (t<sub>AC</sub>)** : Specifies maximum length of time after the input address is changed before the output data is valid.
 
 <p align="center">
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_7.jpg" width=50% height=50%>
@@ -93,11 +93,11 @@ Access time (t<sub>AC</sub>) : Specifies maximum length of time after the input 
 
 #### WRITE Operation
 
-Write cycle time(t<sub>WC</sub>) : Specifies the maximum frequency at which we can write data into the DRAM. 
+**Write cycle time(t<sub>WC</sub>)** : Specifies the maximum frequency at which we can write data into the DRAM. 
 
-Address to Write Delay time(t<sub>AW</sub>) : Specifies the time between the address changing and R/W̅ input going LOW. 
+**Address to Write Delay time(t<sub>AW</sub>)** : Specifies the time between the address changing and R/W̅ input going LOW. 
 
-Write pulse width(t<sub>WP</sub>) : Specifies for how long the input data must be present before the R/W̅ input can go back HIGH in preparation for another Read or Write to DRAM.
+**Write pulse width(t<sub>WP</sub>)** : Specifies for how long the input data must be present before the R/W̅ input can go back HIGH in preparation for another Read or Write to DRAM.
 
 <p align="center">
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_8.jpg" width=50% height=50%>
