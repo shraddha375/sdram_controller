@@ -15,6 +15,8 @@ The fundamental memory cell within a DRAM consists of a transistor and a capacit
 
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_1.jpg" width=100% height=100%>
 
+Reeason why it is called a *Wordline* : Multiple transistors are conected to this line as you increase the capacity of the memory.
+
 When you want to **write** to a memory cell:
 - Enable the Wordline
 - Apply VDD/GND on the Bitline
