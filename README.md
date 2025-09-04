@@ -119,19 +119,19 @@ We distinguish 2nd generation DRAMs from 1st generation DRAMs by the introductio
 
 **Difference 1**
 <p align="center">
-<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_9.jpg" width=50% height=50%>
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_11.jpg" width=50% height=50%>
 </p>
 
 **Difference 2**
 
 <p align="center">
-<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_9.jpg" width=50% height=50%>
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_12.jpg" width=50% height=50%>
 </p>
 
 We cannot go on increasing the number of transistors like this, because when wordline is enabled, it needs to travel long distance (increases resistance and capacitance; reducing frequency of operation). Instead we use arrays as follows:
 
 <p align="center">
-<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_9.jpg" width=50% height=50%>
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_13.jpg" width=50% height=50%>
 </p>
 
 **Difference 3**
