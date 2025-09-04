@@ -95,7 +95,7 @@ Access time (t<sub>AC</sub>) : Specifies maximum length of time after the input 
 
 Write cycle time(t<sub>WC</sub>) : Specifies the maximum frequency at which we can write data into the DRAM. 
 
-Address to Write Delay time(t<sub>AW</sub>) : Specifies the time between the address changing and R/W&#773 input going LOW. <span style="text-decoration:overline">SIGNAL_ACTIVE_LOW</span>
+Address to Write Delay time(t<sub>AW</sub>) : Specifies the time between the address changing and R/W + U+0305 COMBINING OVERLINE input going LOW. 
 
 Write pulse width(t<sub>WP</sub>) : Specifies for how long the input data must be present before the R/<span style="text-decoration: overline;">W</span>
  input can go back HIGH in preparation for another Read or Write to DRAM.
