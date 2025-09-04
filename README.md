@@ -41,7 +41,7 @@ There are two types of refresh:
 - *Auto-Refresh*: Refreshes the capacitors during a normal operation with the SDRAM
 - *Self-Refresh*: Refreshes the SDRAM in a power down mode when the clock enable is 0.
 
-## Generartions of DRAM
+## Generations of DRAM
 
 ### First Generation of DRAM
 
