@@ -81,6 +81,10 @@ The main drawback of using the 3-transistor DRAM cell is that it requires two pa
 
 #### READ Operation
 
+To read a bit, one applies the row and the column addres, then wait for the data to appear on the dout pin. 
+Read cycle time(t_rc) : Specifies how fast the memory can be read.
+Access time (t_ac) : Specifies maximum length of time after the input address is changed before the output data is valid.
+
 <p align="center">
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_7.jpg" width=50% height=50%>
 </p>
