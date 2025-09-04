@@ -138,7 +138,9 @@ We cannot go on increasing the number of transistors like this, because when wor
 
 We also multiplex our address inputs using R̅A̅S̅(Row Addresss Strobe) and C̅A̅S̅(Column Address Strobe), thus reducing the number of pins required. We use the same pins for row address and column address.
 
-
+<p align="center">
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_14.jpg" width=50% height=50%>
+</p>
 
 
 
