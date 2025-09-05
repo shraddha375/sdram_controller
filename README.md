@@ -172,15 +172,6 @@ Here we work at command level instead of signal level, where the combination of 
 - Each bank must be precharged before use.
 - Loading mode register is done at the end of initialization.
 
-  
-<p align="center">
-<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_17.jpg" width=50% height=50%>
-</p>
-
-<p align="center">
-<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_18.jpg" width=50% height=50%>
-</p>
-
 <p align="center">
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_19.jpg" width=50% height=50%>
 </p>
@@ -199,6 +190,14 @@ Here we work at command level instead of signal level, where the combination of 
 
 <p align="center">
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_23.jpg" width=50% height=50%>
+</p>
+
+<p align="center">
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_17.jpg" width=50% height=50%>
+</p>
+
+<p align="center">
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_18.jpg" width=25% height=25%>
 </p>
 
 
