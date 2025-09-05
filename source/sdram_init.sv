@@ -69,7 +69,7 @@ module sdram_init (
     // ----------------------------------------------------
     // Use a single counter to keep track of different time periods
     reg  [2:0] count_clock; // maximum clock cycle wait is 7
-    reg        rst_clock_count; // variable that stores the number of cycles required by each time period
+    reg        rst_clock_count; // reset enabled when that the number of cycles required by each time period completes
  
     always @(posedge sys_clk or negedge sys_rst_n) begin
         if (!sys_rst_n)
@@ -94,6 +94,7 @@ module sdram_init (
     // ----------------------------------------------------
     // Reset Counter Logic Based on State
     // ----------------------------------------------------
+    // combinatorial part
     always @(*) begin
         rst_clock_count = 1'b1; // Default reset enabled
         case (init_state)
@@ -119,11 +120,12 @@ module sdram_init (
             cnt_auto_ref   <= 3'd0;
         end else begin
             case (init_state)
-                WAIT_150U: begin
-                    cnt_auto_ref <= 3'd0;
-                    if (power_on_wait_done)
-                        init_state <= PRECHARGE;
-                end
+                WAIT_150U: 
+                    begin
+                        cnt_auto_ref <= 3'd0;
+                        if (power_on_wait_done)
+                            init_state <= PRECHARGE;
+                    end
  
                 PRECHARGE:
                     init_state <= WAIT_TRP;
