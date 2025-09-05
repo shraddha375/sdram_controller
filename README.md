@@ -173,11 +173,11 @@ Here we work at command level instead of signal level, where the combination of 
 - Loading mode register is done at the end of initialization.
 
 <p align="center">
-<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_19.jpg" width=50% height=50%>
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_19.jpg" width=100% height=100%>
 </p>
 
 <p align="center">
-<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_20.jpg" width=25% height=25%>
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_20.jpg" width=50% height=50%>
 </p>
 
 <p align="center">
@@ -185,7 +185,7 @@ Here we work at command level instead of signal level, where the combination of 
 </p>
 
 <p align="center">
-<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_22.jpg" width=100% height=50%>
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_22.jpg" width=50% height=50%>
 </p>
 
 <p align="center">
