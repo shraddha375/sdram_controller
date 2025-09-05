@@ -161,6 +161,18 @@ Here we work at command level instead of signal level, where the combination of 
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_16.jpg" width=50% height=50%>
 </p>
 
+### Initialization module
+
+- As soon as we apply power to SDRAM, we need to perform initialization.
+- Each memory cell stores data as an electric charge in a capacitor.
+- Charge leaks over time hence memory requires periodic refresh cycles to maintain data integrity.
+- Initialization ensures that all memory cells are pre-charged and refreshed, setting a known state before use.
+- SDRAM is synchronous hence need to wait for the clock to be stable before starting operation (wait for 100 µs for clock stabalization).
+- Control register must be programmed explicitly during initialization for correct SDRAM operation.
+- Each bank must be precharged before use.
+- Loading mode register is done at the end of initialization.
+
+  
 <p align="center">
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_17.jpg" width=50% height=50%>
 </p>
@@ -189,15 +201,5 @@ Here we work at command level instead of signal level, where the combination of 
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_23.jpg" width=50% height=50%>
 </p>
 
-### Initialization module
-
-- As soon as we apply power to SDRAM, we need to perform initialization.
-- Each memory cell stores data as an electric charge in a capacitor.
-- Charge leaks over time hence memory requires periodic refresh cycles to maintain data integrity.
-- Initialization ensures that all memory cells are pre-charged and refreshed, setting a known state before use.
-- SDRAM is synchronous hence need to wait for the clock to be stable before starting operation (wait for 100 µs for clock stabalization).
-- Control register must be programmed explicitly during initialization for correct SDRAM operation.
-- Each bank must be precharged before use.
-- Loading mode register is done at the end of initialization.
 
 ## References
