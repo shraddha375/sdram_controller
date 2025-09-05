@@ -158,7 +158,35 @@ Here we work at command level instead of signal level, where the combination of 
 ## Design of SDRAM Controller
 
 <p align="center">
-<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_15.jpg" width=50% height=50%>
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_16.jpg" width=50% height=50%>
+</p>
+
+<p align="center">
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_17.jpg" width=50% height=50%>
+</p>
+
+<p align="center">
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_18.jpg" width=50% height=50%>
+</p>
+
+<p align="center">
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_19.jpg" width=50% height=50%>
+</p>
+
+<p align="center">
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_20.jpg" width=50% height=50%>
+</p>
+
+<p align="center">
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_21.jpg" width=50% height=50%>
+</p>
+
+<p align="center">
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_22.jpg" width=50% height=50%>
+</p>
+
+<p align="center">
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_23.jpg" width=50% height=50%>
 </p>
 
 ### Initialization module
@@ -171,10 +199,5 @@ Here we work at command level instead of signal level, where the combination of 
 - Control register must be programmed explicitly during initialization for correct SDRAM operation.
 - Each bank must be precharged before use.
 - Loading mode register is done at the end of initialization.
-
-<p align="center">
-<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_15.jpg" width=50% height=50%>
-</p>
-
 
 ## References
