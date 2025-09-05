@@ -120,12 +120,11 @@ module sdram_init (
             cnt_auto_ref   <= 3'd0;
         end else begin
             case (init_state)
-                WAIT_150U: 
-                    begin
-                        cnt_auto_ref <= 3'd0;
-                        if (power_on_wait_done)
-                            init_state <= PRECHARGE;
-                    end
+                WAIT_150U: begin
+                    cnt_auto_ref <= 3'd0;
+                    if (power_on_wait_done)
+                        init_state <= PRECHARGE;
+                end
  
                 PRECHARGE:
                     init_state <= WAIT_TRP;
@@ -217,3 +216,4 @@ module sdram_init (
  
 endmodule
  
+
