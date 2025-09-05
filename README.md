@@ -161,6 +161,11 @@ Here we work at command level instead of signal level, where the combination of 
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_16.jpg" width=50% height=50%>
 </p>
 
+<p align="center">
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_25.jpg" width=25% height=25%>
+</p>
+
+
 ### Initialization module
 
 - As soon as we apply power to SDRAM, we need to perform initialization.
@@ -181,14 +186,6 @@ Here we work at command level instead of signal level, where the combination of 
 </p>
 
 <p align="center">
-<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_21.jpg" width=50% height=100%>
-</p>
-
-<p align="center">
-<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_22.jpg" width=50% height=50%>
-</p>
-
-<p align="center">
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_23.jpg" width=100% height=100%>
 </p>
 
@@ -198,6 +195,21 @@ Here we work at command level instead of signal level, where the combination of 
 
 <p align="center">
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_18.jpg" width=25% height=25%>
+</p>
+
+### Commands
+<p align="center">
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_24.jpg" width=25% height=25%>
+</p>
+
+## Time Period
+
+<p align="center">
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_21.jpg" width=50% height=100%>
+</p>
+
+<p align="center">
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_22.jpg" width=50% height=50%>
 </p>
 
 
