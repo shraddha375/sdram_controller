@@ -197,6 +197,37 @@ Here we work at command level instead of signal level, where the combination of 
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_18.jpg" width=25% height=25%>
 </p>
 
+### Auto Refresh Generator Module
+
+Refreshing
+- DRAM requires refreshing because data is stored in capacitors, which leak charge over time.
+- To prevent data losses, each row must be periodically refreshed.
+- Refreshing DRAM means sequentially opening and reading each row to restore the charge in capacitors.
+- The entire DRAM must be refreshed within specific time (typically every 64 milliseconds for a 64 Mbit DRAM).
+- In older DRAMs (conventional DRAMs), refresh was done using the CBR refresh method.
+- CAS# Before RAS# Refresh
+  - The CAS# (Column Address Strobe) signal is LOW before RAS# (Row Address Strobe).
+  - Signals the DRAM to perform an internal refresh cycle.
+  - The memory controller must manually cycle through all the rows.
+- Normal read/write operation → RAS# before CAS#
+  - To distinguish between R/W and refresh.
+- Auto-refresh in SDRAM
+  - Works similarly to CBR refresh, but SDRAM automatically handles row cycling.
+  - The memory controller only issues a single auto-refresh command, and SDRAM completes the refresh process internally.
+
+ SDRAM refresh
+                ↓
+        ┌───────────────┐
+        │               │
+   Auto Refresh     Self Refresh
+
+- Regardless of Refresh mode:
+  - No row address is required to perform select row refresh.
+  - Refresh Counter → Automatically generates row addresses.
+- AUTO REFRESH is a built-in refresh mechanism in SDRAM.
+  - The memory controller issues a single command, and the SDRAM itself cycles through all the row addresses automatically.
+  - This reduces the burden on the memory controller.
+
 ### Commands
 <p align="center">
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_25.jpg" width=50% height=50%>
