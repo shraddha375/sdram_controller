@@ -243,7 +243,7 @@ To avoid Row Hammer, we issue two AUTOREFRESH command.
 
 
 <p align="center">
-<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_29.jpg" width=50% height=50%>
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_29.jpg" width=25% height=25%>
 </p>
 
 
