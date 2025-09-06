@@ -225,6 +225,9 @@ Here we work at command level instead of signal level, where the combination of 
 - AUTO REFRESH is a built-in refresh mechanism in SDRAM.
 - The memory controller issues a single command, and the SDRAM itself cycles through all the row addresses automatically.
 - This reduces the burden on the memory controller.
+- Since the refresh is performed on all storage cells in a row, this is referred to as row addressing.
+
+To avoid Row Hammer, we issue two AUTOREFRESH command.
 
 ### Commands
 <p align="center">
