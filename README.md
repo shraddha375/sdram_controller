@@ -227,6 +227,22 @@ Here we work at command level instead of signal level, where the combination of 
 - This reduces the burden on the memory controller.
 - Since the refresh is performed on all storage cells in a row, this is referred to as row addressing.
 
+<p align="center">
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_26.jpg" width=50% height=50%>
+</p>
+
+<p align="center">
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_27.jpg" width=50% height=50%>
+</p>
+
+<p align="center">
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_28.jpg" width=50% height=50%>
+</p>
+
+<p align="center">
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_29.jpg" width=50% height=50%>
+</p>
+
 To avoid Row Hammer, we issue two AUTOREFRESH command.
 
 ### Commands
