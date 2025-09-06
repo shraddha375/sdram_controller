@@ -199,7 +199,7 @@ Here we work at command level instead of signal level, where the combination of 
 
 ### Auto Refresh Generator Module
 
-Refreshing
+*Refreshing:*
 - DRAM requires refreshing because data is stored in capacitors, which leak charge over time.
 - To prevent data losses, each row must be periodically refreshed.
 - Refreshing DRAM means sequentially opening and reading each row to restore the charge in capacitors.
@@ -215,18 +215,16 @@ Refreshing
   - Works similarly to CBR refresh, but SDRAM automatically handles row cycling.
   - The memory controller only issues a single auto-refresh command, and SDRAM completes the refresh process internally.
 
- SDRAM refresh
-                ↓
-        ┌───────────────┐
-        │               │
-   Auto Refresh     Self Refresh
+ **SDRAM refresh:**
+   1. Auto Refresh
+   2. Self Refresh
 
 - Regardless of Refresh mode:
   - No row address is required to perform select row refresh.
-  - Refresh Counter → Automatically generates row addresses.
+  - **Refresh Counter** → Automatically generates row addresses.
 - AUTO REFRESH is a built-in refresh mechanism in SDRAM.
-  - The memory controller issues a single command, and the SDRAM itself cycles through all the row addresses automatically.
-  - This reduces the burden on the memory controller.
+- The memory controller issues a single command, and the SDRAM itself cycles through all the row addresses automatically.
+- This reduces the burden on the memory controller.
 
 ### Commands
 <p align="center">
