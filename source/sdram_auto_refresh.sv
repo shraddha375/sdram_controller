@@ -38,6 +38,7 @@ module sdram_ar (
     // --------------------------------------------------
     // Timing Parameters
     // --------------------------------------------------
+    // Clock period is 10ns.
     parameter CNT_REF_MAX  = 11'd1540;  // Refresh interval (~15.5us) for a single row
     parameter TRP_COUNT    = 3'd2;      // Precharge wait cycles
     parameter TRFC_COUNT   = 3'd7;      // Auto-refresh wait cycles
@@ -66,7 +67,7 @@ module sdram_ar (
     reg  [2:0]  current_state;      // FSM current state
     reg  [2:0]  cnt_clk;            // Wait cycle counter
     reg         cnt_clk_rst;       // Counter reset flag
-    reg  [1:0]  refresh_count;     // Number of refresh cycles
+    reg         refresh_count;     // Number of refresh cycles
  
     wire trp_done;                 // Precharge wait complete flag
     wire trfc_done;                // Auto-refresh wait complete flag
@@ -76,6 +77,7 @@ module sdram_ar (
     // --------------------------------------------------
     // Auto-refresh acknowledgment and end signal
     // --------------------------------------------------
+    // When the PRECHARGE command is given, the request for refresh should be turned off
     assign ack      = (current_state == PRECHARGE);
     assign aref_end = (current_state == END); 
  
@@ -123,6 +125,19 @@ module sdram_ar (
     assign trfc_done = (current_state == WAIT_TRFC && cnt_clk == TRFC_COUNT);
 
     // --------------------------------------------------
+    // Counter Reset Logic Based on FSM State
+    // --------------------------------------------------
+    always @(*) begin
+        case (current_state)
+            IDLE,
+            END:        cnt_clk_rst = 1'b1;
+            WAIT_TRP:   cnt_clk_rst = trp_done;
+            WAIT_TRFC:  cnt_clk_rst = trfc_done;
+            default:    cnt_clk_rst = 1'b0;
+        endcase
+    end
+
+    // --------------------------------------------------
     // FSM: Auto-Refresh Operation Control
     // --------------------------------------------------
     always @(posedge sys_clk or negedge sys_rst_n) begin
@@ -134,6 +149,8 @@ module sdram_ar (
                     refresh_count <= 0;
                     if (ar_en && init_done)
                         current_state <= PRECHARGE;
+                    else
+                        current_state <= IDLE;
                 end
  
                 PRECHARGE: begin
@@ -143,6 +160,8 @@ module sdram_ar (
                 WAIT_TRP: begin
                     if (trp_done)
                         current_state <= AUTOREFRESH;
+                    else
+                        current_state <= WAIT_TRP;
                 end
  
                 AUTOREFRESH: begin
@@ -177,19 +196,6 @@ module sdram_ar (
                 default: current_state <= IDLE;
             endcase
         end
-    end
- 
-    // --------------------------------------------------
-    // Counter Reset Logic Based on FSM State
-    // --------------------------------------------------
-    always @(*) begin
-        case (current_state)
-            IDLE,
-            END:        cnt_clk_rst = 1'b1;
-            WAIT_TRP:   cnt_clk_rst = trp_done;
-            WAIT_TRFC:  cnt_clk_rst = trfc_done;
-            default:    cnt_clk_rst = 1'b0;
-        endcase
     end
  
     // --------------------------------------------------
