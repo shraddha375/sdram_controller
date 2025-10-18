@@ -5,7 +5,7 @@ SDRAM (Synchronous Dynamic Random-Access Memory) is widely used in embedded syst
 <mark style="background-color: lightblue"> An SDRAM Controller is a hardware block that:</mark>
 - <code>Interfaces between the system (CPU, FPGA, etc.) and the SDRAM.</code>
 - <code>Converts simple read/write requests into the detailed command sequences required by the SDRAM.</code>
-- </code>Manages all the timing, refresh, and bus control automatically.</code>
+- <code>Manages all the timing, refresh, and bus control automatically.</code>
 
 ---
 
