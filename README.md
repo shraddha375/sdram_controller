@@ -161,12 +161,11 @@ Here we work at command level instead of signal level, where the combination of 
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_16.jpg" width=50% height=50%>
 </p>
 
+Why we need a SDRAM controller: find [here](#SDRAM-Controller)
+
 <p align="center">
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_24.jpg" width=100% height=100%>
 </p>
-
-Why we need a SDRAM controller: find [here](# SDRAM Controller)
-
 
 ### Initialization module
 
