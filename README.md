@@ -40,8 +40,8 @@ Read is a destructive process because it removes or adds extra charge to the cap
 Switches are made from transistors and over a period of time the charges on the capapcitirs leak. To ensure data integrity, we need to perform refresh periodically.
 
 <mark style="background-color: lightblue">There are two types of refresh:</mark>
-- <code>*Auto-Refresh*: Refreshes the capacitors during a normal operation with the SDRAM.</code>
-- <code>*Self-Refresh*: Refreshes the SDRAM in a power down mode when the clock enable is 0.</code>
+- <mark style="background-color: lightblue">*Auto-Refresh*: Refreshes the capacitors during a normal operation with the SDRAM.</mark>
+- <mark style="background-color: lightblue">*Self-Refresh*: Refreshes the SDRAM in a power down mode when the clock enable is 0.</mark>
 
 To give an example, let's say we have 4096 rows in a DRAM and we need to perform refresh for all the rows within 64 ms. That means each row needs to be refreshed in 64 ms/4096 = 15.62 us.
 
