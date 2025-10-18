@@ -161,7 +161,16 @@ Here we work at command level instead of signal level, where the combination of 
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_16.jpg" width=50% height=50%>
 </p>
 
-Why we need a SDRAM controller: find [here](#SDRAM-Controller)
+Why do we need a SDRAM controller: find [here](#SDRAM-Controller)
+
+<mark style="background-color: lightblue">SDRAM controller consists of:</mark>
+- <mark style="background-color: lightblue">Initialization Module</mark>
+- <mark style="background-color: lightblue">Self-Refresh Generator</mark>
+- <mark style="background-color: lightblue">Auto-Refresh Generator</mark>
+- <mark style="background-color: lightblue">Load Mode Register</mark>
+- <mark style="background-color: lightblue">Read Module</mark>
+- <mark style="background-color: lightblue">Write Module</mark>
+- <mark style="background-color: lightblue">Controller</mark>
 
 <p align="center">
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_24.jpg" width=100% height=100%>
