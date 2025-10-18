@@ -2,7 +2,7 @@
 
 SDRAM (Synchronous Dynamic Random-Access Memory) is widely used in embedded systems, FPGAs, and CPUs due to its high-speed data access capabilities. SDRAM cannot be directly interfaced with most processors, FPGAs, or other digital systems without proper control logic. SDRAM has a complex timing and command sequence that must be carefully managed to ensure correct operation.
 
-<mark style="background-color: lightblue"> An SDRAM Controller is a hardware block that:</mark>
+<mark style="background-color: lightblue">An SDRAM Controller is a hardware block that:</mark>
 - <code>Interfaces between the system (CPU, FPGA, etc.) and the SDRAM.</code>
 - <code>Converts simple read/write requests into the detailed command sequences required by the SDRAM.</code>
 - <code>Manages all the timing, refresh, and bus control automatically.</code>
@@ -39,9 +39,9 @@ Read is a destructive process because it removes or adds extra charge to the cap
 
 Switches are made from transistors and over a period of time the charges on the capapcitirs leak. To ensure data integrity, we need to perform refresh periodically.
 
-There are two types of refresh: 
-- *Auto-Refresh*: Refreshes the capacitors during a normal operation with the SDRAM
-- *Self-Refresh*: Refreshes the SDRAM in a power down mode when the clock enable is 0.
+<mark style="background-color: lightblue">There are two types of refresh:</mark>
+- <code>*Auto-Refresh*: Refreshes the capacitors during a normal operation with the SDRAM.</code>
+- <code>*Self-Refresh*: Refreshes the SDRAM in a power down mode when the clock enable is 0.</code>
 
 To give an example, let's say we have 4096 rows in a DRAM and we need to perform refresh for all the rows within 64 ms. That means each row needs to be refreshed in 64 ms/4096 = 15.62 us.
 
