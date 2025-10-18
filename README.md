@@ -187,6 +187,11 @@ Why do we need a SDRAM controller: find [here](#SDRAM-Controller)
 - <mark style="background-color: lightblue">Each bank must be precharged before use.</mark>
 - <mark style="background-color: lightblue">Loading mode register is done at the end of initialization.</mark>
 
+Initialization Module consists of:
+- Counter that measures a duration of 150us after which it flags the power_on_wait_done flag
+- A single counter that to keep track of different time periods: TRP, TRFC and TMRD
+- FSM that changes states:
+
 <p align="center">
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_19.jpg" width=100% height=100%>
 </p>
