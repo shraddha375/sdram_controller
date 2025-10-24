@@ -226,6 +226,8 @@ Outputs:
 
 ### <mark style="background-color: lightblue">Auto Refresh Generator Module</mark>
 
+It is a module that is responsible for periodic refresh of the SDRAM rows during its normal operation.
+
 *Refreshing:*
 - DRAM requires refreshing because data is stored in capacitors, which leak charge over time.
 - To prevent data losses, each row must be periodically refreshed.
@@ -274,6 +276,18 @@ To avoid Row Hammer, we issue two AUTOREFRESH command.
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_27.jpg" width=100% height=100%>
 </p>
 
+Inputs:
+- sys_clk -> System clock signal (1 bit)
+- sys_rst_n -> System reset signal (1 bit)
+ - init_end -> Indicates initialization is done (1 bit)
+ - aref_en -> Enables the auto-refresh generator, it is assertrd by the controller (1 bit)
+
+Outputs:
+- aref_req -> When a period of sigle row refresh is lapsed, this will send an auto refresh request to the controller. Then the controller will suspend any on-going task and enable auto-refresh generator. (1 bit)
+- commands -> Commands (containing CS#, RAS#, CAS# and WE# details) needed by SDRAM (4 bits)
+- banks -> Selection of banks (2 bits)
+- address -> Address line (12 bits)
+- aref_end -> When auto-refresh has completed for a single row (1 bit)
 
 <p align="center">
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_29.jpg" width=25% height=25%>
