@@ -293,7 +293,7 @@ Outputs:
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_29.jpg" width=25% height=25%>
 </p>
 
-### Self Refresh Generator Module
+### <mark style="background-color: lightblue">Self Refresh Generator Module</mark>
 
 It is a module that is refreshes the SDRAM rows when it is powered down. 
 
