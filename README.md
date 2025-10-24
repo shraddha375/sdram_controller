@@ -279,8 +279,8 @@ To avoid Row Hammer, we issue two AUTOREFRESH command.
 Inputs:
 - sys_clk -> System clock signal (1 bit)
 - sys_rst_n -> System reset signal (1 bit)
- - init_end -> Indicates initialization is done (1 bit)
- - aref_en -> Enables the auto-refresh generator, it is assertrd by the controller (1 bit)
+- init_end -> Indicates initialization is done (1 bit)
+- aref_en -> Enables the auto-refresh generator, it is assertrd by the controller (1 bit)
 
 Outputs:
 - aref_req -> When a period of sigle row refresh is lapsed, this will send an auto refresh request to the controller. Then the controller will suspend any on-going task and enable auto-refresh generator. (1 bit)
@@ -301,9 +301,7 @@ Powered down means the clock is turned off and the SDRAM is powered at minimal s
 
 
 Self-Refresh Module consists of:
-- Counter that measures a duration of ~15.5us for a single row refresh
-- A single counter that to keep track of different time periods: TRP and TRFC
-- FSM that changes states: IDLE -> PRECHARGE -> WAIT_TRP -> AUTOREFRESH -> WAIT_TRFC -> END
+- FSM that changes states: IDLE -> PRECHARGE -> ENTRY -> WAIT -> POST-REFRESH -> WAIT_TRP -> WAIT_TRFC1 -> WAIT_TRFC2 -> EXIT
 
 
 <p align="center">
@@ -317,6 +315,19 @@ Self-Refresh Module consists of:
 <p align="center">
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_31.jpg" width=100% height=100%>
 </p>
+
+Inputs:
+- sys_clk -> System clock signal (1 bit)
+- sys_rst_n -> System reset signal (1 bit)
+- init_end -> Indicates initialization is done (1 bit)
+- self_ref_en -> Enables self refresh module. Comes from the controller (1 bit)
+
+Outputs:
+- sdram_cke -> Clock enable. Starts and stops self refresh (1 bit)
+- commands -> Commands (containing CS#, RAS#, CAS# and WE# details) needed by SDRAM (4 bits)
+- banks -> Selection of banks (2 bits)
+- address -> Address line (12 bits)
+- self_ref_done -> Marks the end of completio of a self-refresh (1 bit)
 
 <p align="center">
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_32.jpg" width=50% height=50%>
