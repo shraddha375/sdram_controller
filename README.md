@@ -190,7 +190,7 @@ Why do we need a SDRAM controller: find [here](#SDRAM-Controller)
 Initialization Module consists of:
 - Counter that measures a duration of 150us after which it flags the power_on_wait_done flag
 - A single counter that to keep track of different time periods: TRP, TRFC and TMRD
-- FSM that changes states: WAIT_150US -> PRECHARGE WAIT_TRP AUTOREFRESH
+- FSM that changes states: WAIT_150US -> PRECHARGE -> WAIT_TRP -> AUTOREFRESH -> WAIT_TRFC -> LOAD_MODE -> WAIT_TMRD -> INIT_DONE
 
 <p align="center">
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_19.jpg" width=100% height=100%>
