@@ -295,6 +295,10 @@ Outputs:
 
 ### Self Refresh Generator Module
 
+It is a module that is refreshes the SDRAM rows when it is powered down. 
+
+Powered down means the clock is turned off and the SDRAM is powered at minimal standby voltage enough to keep the capacitors charged.
+
 
 <p align="center">
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_34.jpg" width=100% height=100%>
