@@ -300,6 +300,12 @@ It is a module that is refreshes the SDRAM rows when it is powered down.
 Powered down means the clock is turned off and the SDRAM is powered at minimal standby voltage enough to keep the capacitors charged.
 
 
+Self-Refresh Module consists of:
+- Counter that measures a duration of ~15.5us for a single row refresh
+- A single counter that to keep track of different time periods: TRP and TRFC
+- FSM that changes states: IDLE -> PRECHARGE -> WAIT_TRP -> AUTOREFRESH -> WAIT_TRFC -> END
+
+
 <p align="center">
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_34.jpg" width=100% height=100%>
 </p>
