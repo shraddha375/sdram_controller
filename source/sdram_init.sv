@@ -86,7 +86,8 @@ module sdram_init (
     parameter TRP_COUNT   = 3'd2; // Precharge wait cycles
     parameter TRFC_COUNT  = 3'd7; // Auto-refresh wait cycles
     parameter TMRD_COUNT  = 3'd2; // Mode Register Set wait cycles
- 
+
+    // Flags raised based on states and the counter value
     wire trp_end   = (init_state == WAIT_TRP)  && (count_clock == TRP_COUNT);
     wire trfc_end  = (init_state == WAIT_TRFC) && (count_clock == TRFC_COUNT);
     wire tmrd_end  = (init_state == WAIT_TMRD) && (count_clock == TMRD_COUNT);
@@ -94,7 +95,7 @@ module sdram_init (
     // ----------------------------------------------------
     // Reset Counter Logic Based on State
     // ----------------------------------------------------
-    // combinatorial part
+    // combinatorial part; reset is generated depending on the type of flag
     always @(*) begin
         rst_clock_count = 1'b1; // Default reset enabled
         case (init_state)
@@ -216,4 +217,5 @@ module sdram_init (
  
 endmodule
  
+
 
