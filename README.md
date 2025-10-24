@@ -212,7 +212,7 @@ Initialization Module consists of:
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_18.jpg" width=25% height=25%>
 </p>
 
-### Auto Refresh Generator Module
+### <mark style="background-color: lightblue">Auto Refresh Generator Module</mark>
 
 *Refreshing:*
 - DRAM requires refreshing because data is stored in capacitors, which leak charge over time.
@@ -220,14 +220,14 @@ Initialization Module consists of:
 - Refreshing DRAM means sequentially opening and reading each row to restore the charge in capacitors.
 - The entire DRAM must be refreshed within specific time (typically every 64 milliseconds for a 64 Mbit DRAM).
 - In older DRAMs (conventional DRAMs), refresh was done using the CBR refresh method.
-- CAS# Before RAS# Refresh
+- <mark style="background-color: lightblue">CAS# Before RAS# Refresh </mark>
   - The CAS# (Column Address Strobe) signal is LOW before RAS# (Row Address Strobe).
   - Signals the DRAM to perform an internal refresh cycle.
   - The memory controller must manually cycle through all the rows.
-- Normal read/write operation → RAS# before CAS#
+- <mark style="background-color: lightblue">Normal read/write operation → RAS# before CAS#</mark>
   - To distinguish between R/W and refresh.
 - Auto-refresh in SDRAM
-  - Works similarly to CBR refresh, but SDRAM automatically handles row cycling.
+  - <mark style="background-color: lightblue">Works similarly to CBR refresh, but SDRAM automatically handles row cycling.</mark>
   - The memory controller only issues a single auto-refresh command, and SDRAM completes the refresh process internally.
 
  **SDRAM refresh:**
@@ -236,11 +236,11 @@ Initialization Module consists of:
 
 - Regardless of Refresh mode:
   - No row address is required to perform select row refresh.
-  - **Refresh Counter** → Automatically generates row addresses.
+  - <mark style="background-color: lightblue">**Refresh Counter** → Automatically generates row addresses.</mark>
 - AUTO REFRESH is a built-in refresh mechanism in SDRAM.
-- The memory controller issues a single command, and the SDRAM itself cycles through all the row addresses automatically.
-- This reduces the burden on the memory controller.
-- Since the refresh is performed on all storage cells in a row, this is referred to as row addressing.
+- <mark style="background-color: lightblue">The memory controller issues a single command, and the SDRAM itself cycles through all the row addresses automatically.</mark>
+- <mark style="background-color: lightblue">This reduces the burden on the memory controller.</mark>
+- <mark style="background-color: lightblue">Since the refresh is performed on all storage cells in a row, there is no need for column addressing.</mark>
 
 <p align="center">
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_26.jpg" width=100% height=100%>
