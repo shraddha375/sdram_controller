@@ -209,14 +209,14 @@ Initialization Module consists of:
 </p>
 
 Inputs:
-- sys_clk:
-- sys_rst_n:
+- sys_clk -> System clock signal (1 bit)
+- sys_rst_n -> System reset signal (1 bit)
 
 Outputs:
-- commands:
-- banks:
-- address:
-- init_done:
+- commands -> Commands (containing CS#, RAS#, CAS# and WE# details) needed by SDRAM (4 bits)
+- banks -> Selection of banks (2 bits)
+- address -> Address line (12 bits)
+- init_done -> Marks completion of SDRAM initialization (1 bit)
 
 <p align="center">
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_18.jpg" width=25% height=25%>
