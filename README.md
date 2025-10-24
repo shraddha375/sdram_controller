@@ -242,6 +242,12 @@ Initialization Module consists of:
 - <mark style="background-color: lightblue">This reduces the burden on the memory controller.</mark>
 - <mark style="background-color: lightblue">Since the refresh is performed on all storage cells in a row, there is no need for column addressing.</mark>
 
+
+Auto-Refresh Module consists of:
+- Counter that measures a duration of ~15.5us for a single row refresh
+- /\A single counter that to keep track of different time periods: TRP, TRFC and TMRD
+- /\FSM that changes states: WAIT_150US -> PRECHARGE -> WAIT_TRP -> AUTOREFRESH -> WAIT_TRFC -> LOAD_MODE -> WAIT_TMRD -> INIT_DONE
+
 <p align="center">
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_26.jpg" width=100% height=100%>
 </p>
