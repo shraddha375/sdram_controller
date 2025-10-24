@@ -208,6 +208,16 @@ Initialization Module consists of:
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_17.jpg" width=100% height=100%>
 </p>
 
+Inputs:
+- sys_clk:
+- sys_rst_n:
+
+Outputs:
+- commands:
+- banks:
+- address:
+- init_done:
+
 <p align="center">
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_18.jpg" width=25% height=25%>
 </p>
