@@ -178,14 +178,16 @@ Why do we need a SDRAM controller: find [here](#SDRAM-Controller)
 
 ### <mark style="background-color: lightblue">Initialization module</mark>
 
-- <mark style="background-color: lightblue">As soon as we apply power to SDRAM, we need to perform initialization.</mark>
-- <mark style="background-color: lightblue">Each memory cell stores data as an electric charge in a capacitor.</mark>
-- <mark style="background-color: lightblue">Charge leaks over time hence memory requires periodic refresh cycles to maintain data integrity.</mark>
-- <mark style="background-color: lightblue">Initialization ensures that all memory cells are pre-charged and refreshed, setting a known state before use.</mark>
-- <mark style="background-color: lightblue">SDRAM is synchronous hence need to wait for the clock to be stable before starting operation (wait for 100 µs for clock stabalization).</mark>
-- <mark style="background-color: lightblue">Control register must be programmed explicitly during initialization for correct SDRAM operation.</mark>
-- <mark style="background-color: lightblue">Each bank must be precharged before use.</mark>
-- <mark style="background-color: lightblue">Loading mode register is done at the end of initialization.</mark>
+It is a module that initializes the SDRAM after we apply power to it. Initialization ensures that all memory cells are pre-charged and refreshed, setting a known state before use.
+
+- As soon as we apply power to SDRAM, we need to perform initialization.
+- Each memory cell stores data as an electric charge in a capacitor.
+- Charge leaks over time hence memory requires periodic refresh cycles to maintain data integrity.
+- Initialization ensures that all memory cells are pre-charged and refreshed, setting a known state before use.
+- SDRAM is synchronous hence need to wait for the clock to be stable before starting operation (wait for 100 µs for clock stabalization).
+- Control register must be programmed explicitly during initialization for correct SDRAM operation.</mark>
+- Each bank must be precharged before use.
+- Loading mode register is done at the end of initialization.
 
 Initialization Module consists of:
 - Counter that measures a duration of 150us after which it flags the power_on_wait_done flag
