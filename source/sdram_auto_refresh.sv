@@ -78,6 +78,7 @@ module sdram_ar (
     // Auto-refresh acknowledgment and end signal
     // --------------------------------------------------
     // When the PRECHARGE command is given, the request for refresh should be turned off
+    // ack is high when state goes to precharge, it helps in deasserting the ar_request for another auto refrsh since its already processing one
     assign ack      = (current_state == PRECHARGE);
     assign aref_end = (current_state == END); 
  
@@ -243,9 +244,11 @@ module sdram_ar (
                     ar_cmdo  <= CMD_NOP;
                     ar_bao   <= 2'b11;
                     ar_addro <= 12'hFFF;
+                    ar_end   <= 1'b0;
                 end
             endcase
         end
     end
  
 endmodule
+
