@@ -345,14 +345,18 @@ The module programs the LOAD MODE REGISTER. The mode register is used to define 
 Moed register is programmed via the LOAD MODE REGISTER. The register retains the information until it is programmed again or the device loses power. 
 The mode register must be loaded when all banks are idle, and the controller must wait for the specified time before initiating the subsequent operation.
 
-<pic1>
+<p align="center">
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_35.jpg" width=100% height=100%>
+</p>
 
 **Burst Length**: 
 - READ and WRITE accesses to the SDRAM are burst oriented; accesses start at a selected location and continue for a programmed number of locations in a programmed sequence.
 - Burst Length determines the maximum number of column locations that can be accessed for a given READ or WRITE command.
 - When a READ or WRITE command is issued, a block of columns equal to the burst length is effectively selected.
 
-  <pic2> regarding how a0-9 etc work for x4, x8, x16
+<p align="center">
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_36.jpg" width=100% height=100%>
+</p>
 
 The block is uniquely selected by:
 - When BL = 2 -> A1–A9 (x4) : A1–A8 (x8) : A1–A7 (x16)
@@ -360,20 +364,26 @@ The block is uniquely selected by:
 - When BL = 8 -> A3–A9 (x4) : A3–A8 (x8) : A3–A7 (x16)
 - The remaining (least significant) address bit(s) is (are) used to select the starting location within the block.
 
-  <pic3>
+<p align="center">
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_37.jpg" width=100% height=100%>
+</p>
 
 **Burst Type:**
 - Accesses within a given burst may be programmed to be either sequential or interleaved; this is referred to as the burst type and is selected via bit M3
 - The ordering of accesses within a burst is determined by the burst length, the burst type and the starting column address.
 
-  <pic4>
+<p align="center">
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_38.jpg" width=100% height=100%>
+</p>
 
 **CAS Latency:**
 -CL is the delay, in clock cycles, between the registration of a READ command and the availability of the first piece of output data. The latency can be set to two or three clocks.
 - If a READ command is registered at clock edge n and the latency is m clocks, the data will be available by clock edge n + m. The DQs will start driving as a result of the clock
 edge one cycle earlier (n + m - 1), and provided that the relevant access times are met, the data will be valid by clock edge n + m.
 
-<pic>
+<p align="center">
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_39.jpg" width=100% height=100%>
+</p>
 
 **Operating Mode**
 - The normal operating mode is selected by setting M7 and M8 to zero; the other combinations of values for M7 and M8 are reserved for future use and/or test modes.
@@ -381,6 +391,18 @@ edge one cycle earlier (n + m - 1), and provided that the relevant access times 
 **Write Burst Mode**
 - When M9 = 0, the burst length programmed via M0–M2 applies to both read and write bursts
 - When M9 = 1, the programmed burst length applies to read bursts, but write accesses are single-location (nonburst) accesses.
+
+<p align="center">
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_40.jpg" width=100% height=100%>
+</p>
+
+<p align="center">
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_41.jpg" width=100% height=100%>
+</p>
+
+<p align="center">
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_42.jpg" width=100% height=100%>
+</p>
 
 ### Commands
 <p align="center">
