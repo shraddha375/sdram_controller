@@ -333,7 +333,17 @@ Outputs:
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_32.jpg" width=50% height=50%>
 </p>
 
+### <mark style="background-color: lightblue">Load Mode Register module</mark>
 
+The module programs the LOAD MODE REGISTER. The mode register is used to define the specific mode of operation of the SDRAM. It includes the selection of:
+- burst length (M0-M2)
+- burst type (M3)
+- CAS Latency (M4-M6)
+- operating mode (M7-M8)
+- write burst mode (M9)
+
+Moed register is programmed via the LOAD MODE REGISTER. The register retains the information until it is programmed again or the device loses power. 
+The mode register must be loaded when all banks are idle, and the controller must wait for the specified time before initiating the subsequent operation.
 
 ### Commands
 <p align="center">
