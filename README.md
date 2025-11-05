@@ -327,7 +327,7 @@ Outputs:
 - commands -> Commands (containing CS#, RAS#, CAS# and WE# details) needed by SDRAM (4 bits)
 - banks -> Selection of banks (2 bits)
 - address -> Address line (12 bits)
-- self_ref_done -> Marks the end of completio of a self-refresh (1 bit)
+- self_ref_done -> Marks the end of completion of a self-refresh (1 bit)
 
 <p align="center">
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_32.jpg" width=50% height=50%>
@@ -373,16 +373,16 @@ The block is uniquely selected by:
 - The ordering of accesses within a burst is determined by the burst length, the burst type and the starting column address.
 
 <p align="center">
-<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_38.JPG" width=75% height=75%>
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_37.JPG" width=75% height=75%>
 </p>
 
 **CAS Latency:**
--CL is the delay, in clock cycles, between the registration of a READ command and the availability of the first piece of output data. The latency can be set to two or three clocks.
+- CL is the delay, in clock cycles, between the registration of a READ command and the availability of the first piece of output data. The latency can be set to two or three clocks.
 - If a READ command is registered at clock edge n and the latency is m clocks, the data will be available by clock edge n + m. The DQs will start driving as a result of the clock
 edge one cycle earlier (n + m - 1), and provided that the relevant access times are met, the data will be valid by clock edge n + m.
 
 <p align="center">
-<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_37.JPG" width=75% height=75%>
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_38.JPG" width=75% height=75%>
 </p>
 
 **Operating Mode**
@@ -393,15 +393,29 @@ edge one cycle earlier (n + m - 1), and provided that the relevant access times 
 - When M9 = 1, the programmed burst length applies to read bursts, but write accesses are single-location (nonburst) accesses.
 
 <p align="center">
-<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_35.JPG" width=25% height=25%>
-</p>
-
-<p align="center">
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_41.JPG" width=50% height=50%>
 </p>
 
 <p align="center">
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_42.JPG" width=100% height=100%>
+</p>
+
+
+Inputs:
+- sys_clk -> System clock signal (1 bit)
+- sys_rst_n -> System reset signal (1 bit)
+- init_end -> Indicates initialization is done (1 bit)
+- mode_reg_en -> Enables load mode register module. Comes from the controller (1 bit)
+- mode_reg_val -> Value of load mode register to be programmed. Comes from the controller (12 bits)
+
+Outputs:
+- commands -> Commands (containing CS#, RAS#, CAS# and WE# details) needed by SDRAM (4 bits)
+- banks -> Selection of banks (2 bits)
+- address -> Address line (12 bits)
+- mode_reg_done -> Marks the end of completion of loading the mode register (1 bit)
+
+<p align="center">
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_35.JPG" width=25% height=25%>
 </p>
 
 ### Commands
