@@ -346,7 +346,7 @@ Moed register is programmed via the LOAD MODE REGISTER. The register retains the
 The mode register must be loaded when all banks are idle, and the controller must wait for the specified time before initiating the subsequent operation.
 
 <p align="center">
-<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_35.JPG" width=25% height=25%>
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_36.JPG" width==75% height=75%>
 </p>
 
 **Burst Length**: 
@@ -355,7 +355,7 @@ The mode register must be loaded when all banks are idle, and the controller mus
 - When a READ or WRITE command is issued, a block of columns equal to the burst length is effectively selected.
 
 <p align="center">
-<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_36.JPG" width==75% height=75%>
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_35.JPG" width=25% height=25%>
 </p>
 
 The block is uniquely selected by:
