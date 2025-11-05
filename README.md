@@ -301,7 +301,7 @@ Powered down means the clock is turned off and the SDRAM is powered at minimal s
 
 
 Self-Refresh Module consists of:
-- FSM that changes states: IDLE -> PRECHARGE -> ENTRY -> WAIT_TRFC1 -> WAIT -> POST-REFRESH -> WAIT_TRP -> WAIT_TRFC2 -> EXIT
+- FSM that changes states: IDLE -> PRECHARGE -> WAIT_TRP -> ENTRY -> WAIT_TRFC1 -> WAIT -> POST-REFRESH -> WAIT_TRFC2 -> EXIT
 
 
 <p align="center">
