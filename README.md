@@ -394,7 +394,10 @@ edge one cycle earlier (n + m - 1), and provided that the relevant access times 
 
 <p align="center">
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_41.JPG" width=50% height=50%>
-</p>
+</p
+
+Self-Refresh Module consists of:
+- FSM that changes states: IDLE -> PRECHARGE -> WAIT_TRP -> LOAD_MODE -> WAIT_TMRD -> EXIT
 
 <p align="center">
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_42.JPG" width=100% height=100%>
