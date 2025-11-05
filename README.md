@@ -355,7 +355,7 @@ The mode register must be loaded when all banks are idle, and the controller mus
 - When a READ or WRITE command is issued, a block of columns equal to the burst length is effectively selected.
 
 <p align="center">
-<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_35.JPG" width=25% height=25%>
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_40.JPG" width=100% height=100%>
 </p>
 
 The block is uniquely selected by:
@@ -365,7 +365,7 @@ The block is uniquely selected by:
 - The remaining (least significant) address bit(s) is (are) used to select the starting location within the block.
 
 <p align="center">
-<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_37.JPG" width=75% height=75%>
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_39.JPG" width=100% height=100%>
 </p>
 
 **Burst Type:**
@@ -382,7 +382,7 @@ The block is uniquely selected by:
 edge one cycle earlier (n + m - 1), and provided that the relevant access times are met, the data will be valid by clock edge n + m.
 
 <p align="center">
-<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_39.JPG" width=100% height=100%>
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_37.JPG" width=75% height=75%>
 </p>
 
 **Operating Mode**
@@ -393,7 +393,7 @@ edge one cycle earlier (n + m - 1), and provided that the relevant access times 
 - When M9 = 1, the programmed burst length applies to read bursts, but write accesses are single-location (nonburst) accesses.
 
 <p align="center">
-<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_40.JPG" width=100% height=100%>
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_35.JPG" width=25% height=25%>
 </p>
 
 <p align="center">
