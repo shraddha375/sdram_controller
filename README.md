@@ -346,7 +346,7 @@ Moed register is programmed via the LOAD MODE REGISTER. The register retains the
 The mode register must be loaded when all banks are idle, and the controller must wait for the specified time before initiating the subsequent operation.
 
 <p align="center">
-<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_35.JPG" width=100% height=100%>
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_35.JPG" width=25% height=25%>
 </p>
 
 **Burst Length**: 
@@ -355,7 +355,7 @@ The mode register must be loaded when all banks are idle, and the controller mus
 - When a READ or WRITE command is issued, a block of columns equal to the burst length is effectively selected.
 
 <p align="center">
-<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_36.JPG" width=100% height=100%>
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_36.JPG" width==75% height=75%>
 </p>
 
 The block is uniquely selected by:
@@ -365,7 +365,7 @@ The block is uniquely selected by:
 - The remaining (least significant) address bit(s) is (are) used to select the starting location within the block.
 
 <p align="center">
-<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_37.JPG" width=100% height=100%>
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_37.JPG" width=75% height=75%>
 </p>
 
 **Burst Type:**
@@ -373,7 +373,7 @@ The block is uniquely selected by:
 - The ordering of accesses within a burst is determined by the burst length, the burst type and the starting column address.
 
 <p align="center">
-<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_38.JPG" width=100% height=100%>
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_38.JPG" width=75% height=75%>
 </p>
 
 **CAS Latency:**
@@ -397,11 +397,11 @@ edge one cycle earlier (n + m - 1), and provided that the relevant access times 
 </p>
 
 <p align="center">
-<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_41.JPG" width=100% height=100%>
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_41.JPG" width=25% height=25%>
 </p>
 
 <p align="center">
-<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_42.JPG" width=100% height=100%>
+<img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_42.JPG" width=50% height=50%>
 </p>
 
 ### Commands
