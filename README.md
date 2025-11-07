@@ -470,12 +470,18 @@ Read Module consists of:
 Inputs:
 - sys_clk -> System clock signal (1 bit)
 - sys_rst_n -> System reset signal (1 bit)
+- rd_en -> Read enable signal (1 bit)
+- rd_addri -> Read address: (24:23) - Bank, (22:11) - Row, (10) - Auto-precharge, (9:8) - Reserved, (7:0) - Column (25 bits)
+- rd_din -> Data input from SDRAM (16 bits)
+- rd_blength -> SDRAM read burst length (8 bits)
 
 Outputs:
 - commands -> Commands (containing CS#, RAS#, CAS# and WE# details) needed by SDRAM (4 bits)
 - banks -> Selection of banks (2 bits)
 - address -> Address line (12 bits)
-- init_done -> Marks completion of SDRAM initialization (1 bit)
+- output_data -> Output read data (16 bits)
+- valid -> Read valid signal (data ready) (1 bit)
+- end -> Read operation end signal (1 bit)
 
 <p align="center">
  <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_44.JPG" width=50% height=50%>
