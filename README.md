@@ -421,6 +421,20 @@ Outputs:
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_35.JPG" width=25% height=25%>
 </p>
 
+### <mark style="background-color: lightblue">Read Module</mark>
+
+The module is responsible for reading from the SDRAM. Before any READ or WRITE commands can be issued to a bank within the SDRAM, a row in that bank must be “opened.” This is accomplished via the ACTIVE command, which selects both the bank and the row to be activated. The value on the BA0, BA1 inputs selects the bank, and the address provided on inputs A0–A11 selects the row. This row remains active (or open) for accesses until a precharge command is issued to that bank. A precharge command must be issued before opening a different row in the same bank.
+
+The PRECHARGE command is used to deactivate the open row in a particular bank or the open row in all banks
+
+After opening a row (issuing an ACTIVE command), a READ or WRITE command may be issued to that row. The READ command is used to initiate a burst read access to an active row. The value on the BA0, BA1 inputs selects the bank, and the address provided on inputs A0–A9 (x4), A0–A8 (x8), or A0–A7 (x16) selects the starting column location. The value on input A10 determines whether auto precharge is used. If auto precharge is selected, the row being accessed will be precharged at the end of the read burst; if auto precharge is not selected, the row will remain open for subsequent accesses.
+
+During READ bursts, the valid data-out element from the starting column address will be available following the CL after the READ command.
+
+<pictures>
+
+
+
 ### Commands
 <p align="center">
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_25.jpg" width=50% height=50%>
