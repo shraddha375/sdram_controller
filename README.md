@@ -433,7 +433,9 @@ During READ bursts, the valid data-out element from the starting column address 
 
 <pictures>
 
+Full-page READ bursts can be truncated with the BURST TERMINATE command, and fixed-length READ bursts may be truncated with a BURST TERMINATE command, provided that auto precharge was not activated. The BURST TERMINATE command should be issued x cycles before the clock edge at which the last desired data element is valid, where x = CL - 1.
 
+The BURST TERMINATE command is used to truncate either fixed-length or full-page bursts. The BURST TERMINATE command does not precharge the row; the row will remain open until a PRECHARGE command is issued.
 
 ### Commands
 <p align="center">
