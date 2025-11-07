@@ -396,7 +396,7 @@ edge one cycle earlier (n + m - 1), and provided that the relevant access times 
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_41.JPG" width=50% height=50%>
 </p
 
-Self-Refresh Module consists of:
+Load Mode Register Module consists of:
 - FSM that changes states: IDLE -> PRECHARGE -> WAIT_TRP -> LOAD_MODE -> WAIT_TMRD -> EXIT
 
 <p align="center">
@@ -460,9 +460,22 @@ Full-page READ bursts can be truncated with the BURST TERMINATE command, and fix
 
 The BURST TERMINATE command is used to truncate either fixed-length or full-page bursts. The BURST TERMINATE command does not precharge the row; the row will remain open until a PRECHARGE command is issued.
 
+Read Module consists of:
+- FSM that changes states: IDLE -> PRECHARGE -> WAIT_TRP -> LOAD_MODE -> WAIT_TMRD -> EXIT
+
 <p align="center">
  <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_43.JPG" width=100% height=100%>
 </p>
+
+Inputs:
+- sys_clk -> System clock signal (1 bit)
+- sys_rst_n -> System reset signal (1 bit)
+
+Outputs:
+- commands -> Commands (containing CS#, RAS#, CAS# and WE# details) needed by SDRAM (4 bits)
+- banks -> Selection of banks (2 bits)
+- address -> Address line (12 bits)
+- init_done -> Marks completion of SDRAM initialization (1 bit)
 
 <p align="center">
  <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_44.JPG" width=50% height=50%>
