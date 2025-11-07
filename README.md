@@ -431,13 +431,7 @@ After opening a row (issuing an ACTIVE command), a READ or WRITE command may be 
 
 During READ bursts, the valid data-out element from the starting column address will be available following the CL after the READ command.
 
-<p align="center">
- <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_43.JPG" width=50% height=50%>
-</p>
 
-<p align="center">
- <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_44.JPG" width=50% height=50%>
-</p>
 
 <p align="center">
  <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_45.JPG" width=50% height=50%>
@@ -461,6 +455,14 @@ During READ bursts, the valid data-out element from the starting column address 
 
 <p align="center">
  <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_50.JPG" width=50% height=50%>
+</p>
+
+<p align="center">
+ <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_43.JPG" width=100% height=100%>
+</p>
+
+<p align="center">
+ <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_44.JPG" width=50% height=50%>
 </p>
 
 Full-page READ bursts can be truncated with the BURST TERMINATE command, and fixed-length READ bursts may be truncated with a BURST TERMINATE command, provided that auto precharge was not activated. The BURST TERMINATE command should be issued x cycles before the clock edge at which the last desired data element is valid, where x = CL - 1.
