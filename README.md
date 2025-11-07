@@ -461,7 +461,7 @@ Full-page READ bursts can be truncated with the BURST TERMINATE command, and fix
 The BURST TERMINATE command is used to truncate either fixed-length or full-page bursts. The BURST TERMINATE command does not precharge the row; the row will remain open until a PRECHARGE command is issued.
 
 Read Module consists of:
-- FSM that changes states: IDLE -> PRECHARGE -> WAIT_TRP -> LOAD_MODE -> WAIT_TMRD -> EXIT
+- FSM that changes states: IDLE -> ACTIVE -> WAIT_TRCD -> READ -> WAIT_CAS -> READ_DATA -> PRECHARGE -> WAIT_TRP -> EXIT
 
 <p align="center">
  <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_43.JPG" width=100% height=100%>
