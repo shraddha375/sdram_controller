@@ -487,6 +487,11 @@ Outputs:
  <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_44.JPG" width=50% height=50%>
 </p>
 
+### <mark style="background-color: lightblue">Write Module</mark>
+
+The module is responsible for writing to the SDRAM. The WRITE command is used to initiate a burst write access to an active row. The value on the BA0, BA1 inputs selects the bank, and the address provided on inputs A0–A9 (x4), A0–A8 (x8), or A0–A7 (x16) selects the starting column location. The value on input A10 determines whether auto precharge is used. If auto precharge is selected, the row being accessed will be precharged at the end of the write burst; if auto precharge is not selected, the row will remain open for subsequent accesses.
+
+The starting column and bank addresses are provided with the WRITE command, and auto precharge is either enabled or disabled for that access. During WRITE bursts, the first valid data-in element will be registered coincident with the WRITE command. Subsequent data elements will be registered on each successive positive clock edge.
 
 ### Commands
 <p align="center">
