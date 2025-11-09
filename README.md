@@ -487,6 +487,16 @@ Outputs:
  <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_44.JPG" width=50% height=50%>
 </p>
 
+
+<p align="center">
+ <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_53.JPG" width=100% height=100%>
+</p>
+
+<p align="center">
+ <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_59.JPG" width=50% height=50%>
+</p>
+
+
 ### <mark style="background-color: lightblue">Write Module</mark>
 
 The module is responsible for writing to the SDRAM. The WRITE command is used to initiate a burst write access to an active row. The value on the BA0, BA1 inputs selects the bank, and the address provided on inputs A0–A9 (x4), A0–A8 (x8), or A0–A7 (x16) selects the starting column location. The value on input A10 determines whether auto precharge is used. If auto precharge is selected, the row being accessed will be precharged at the end of the write burst; if auto precharge is not selected, the row will remain open for subsequent accesses.
@@ -503,9 +513,6 @@ The starting column and bank addresses are provided with the WRITE command, and 
  <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_52.png" width=50% height=50%>
 </p>
 
-<p align="center">
- <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_53.JPG" width=50% height=50%>
-</p>
 
 <p align="center">
  <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_54.JPG" width=50% height=50%>
@@ -527,9 +534,7 @@ The starting column and bank addresses are provided with the WRITE command, and 
  <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_58.JPG" width=50% height=50%>
 </p>
 
-<p align="center">
- <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_59.JPG" width=50% height=50%>
-</p>
+
 
 <p align="center">
  <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_60.JPG" width=50% height=50%>
