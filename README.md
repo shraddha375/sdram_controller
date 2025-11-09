@@ -470,6 +470,7 @@ Read Module consists of:
 Inputs:
 - sys_clk -> System clock signal (1 bit)
 - sys_rst_n -> System reset signal (1 bit)
+- init_end -> SDRAM Initialization is done (1 bit)
 - rd_en -> Read enable signal (1 bit)
 - rd_addri -> Read address: (24:23) - Bank, (22:11) - Row, (10) - Auto-precharge, (9:8) - Reserved, (7:0) - Column (25 bits)
 - rd_din -> Data input from SDRAM (16 bits)
@@ -491,6 +492,25 @@ Outputs:
 <p align="center">
  <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_53.JPG" width=100% height=100%>
 </p>
+
+Inputs:
+- sys_clk -> System clock signal (1 bit)
+- sys_rst_n -> System reset signal (1 bit)
+- init_end -> SDRAM Initialization is done (1 bit)
+- rd_en -> Read enable signal (1 bit)
+- rd_addri -> Read address: (24:23) - Bank, (22:11) - Row, (10) - Auto-precharge, (9:8) - Reserved, (7:0) - Column (25 bits)
+- rd_din -> Data input from SDRAM (16 bits)
+- rd_blength -> SDRAM read burst length (8 bits)
+- wait -> wait for auto ref (1 bit)
+
+Outputs:
+- commands -> Commands (containing CS#, RAS#, CAS# and WE# details) needed by SDRAM (4 bits)
+- banks -> Selection of banks (2 bits)
+- address -> Address line (12 bits)
+- output_data -> Output read data (16 bits)
+- valid -> Read valid signal (data ready) (1 bit)
+- end -> Read operation end signal (1 bit)
+- transfer_error -> Transfer is not complete (1 bit)
 
 <p align="center">
  <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_59.JPG" width=50% height=50%>
@@ -527,6 +547,26 @@ The starting column and bank addresses are provided with the WRITE command, and 
  <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_54.JPG" width=100% height=100%>
 </p>
 
+
+Inputs:
+- sys_clk -> System clock signal (1 bit)
+- sys_rst_n -> System reset signal (1 bit)
+- init_end -> SDRAM Initialization is done (1 bit)
+- wr_en -> Write enable signal (1 bit)
+- wr_addri -> Write address: (24:23) - Bank, (22:11) - Row, (10) - Auto-precharge, (9:8) - Reserved, (7:0) - Column (25 bits)
+- wr_din -> Data to write to SDRAM (16 bits)
+- wr_blength -> SDRAM write burst length (10 bits)
+- wr_dqm_in -> Data Mask Input (1 bit) 
+
+Outputs:
+- commands -> Commands (containing CS#, RAS#, CAS# and WE# details) needed by SDRAM (4 bits)
+- banks -> Selection of banks (2 bits)
+- address -> Address line (12 bits)
+- output_data -> Output read data (16 bits)
+- valid -> Read valid signal (data ready) (1 bit)
+- end -> Read operation end signal (1 bit)
+- 
+
 <p align="center">
  <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_58.JPG" width=25% height=25%>
 </p>
@@ -537,6 +577,26 @@ The starting column and bank addresses are provided with the WRITE command, and 
 </p>
 
 
+Inputs:
+- sys_clk -> System clock signal (1 bit)
+- sys_rst_n -> System reset signal (1 bit)
+- init_end -> SDRAM Initialization is done (1 bit)
+- wr_en -> Write enable signal (1 bit)
+- wr_addri -> Write address: (24:23) - Bank, (22:11) - Row, (10) - Auto-precharge, (9:8) - Reserved, (7:0) - Column (25 bits)
+- wr_din -> Data to write to SDRAM (16 bits)
+- wr_blength -> SDRAM write burst length (10 bits)
+- wr_dqm_in -> Data Mask Input (1 bit)
+- wait -> wait for auto ref (1 bit)
+
+Outputs:
+- commands -> Commands (containing CS#, RAS#, CAS# and WE# details) needed by SDRAM (4 bits)
+- banks -> Selection of banks (2 bits)
+- address -> Address line (12 bits)
+- apply_data -> Indicates when the controller is ready to accept new data (1 bit)
+- wr_dqm_out -> Data Mask Output (1 bit)
+- end -> Write operation end signal (1 bit)
+- data_written -> Data to be driven to SDRAM (16 bits)
+- transfer_error -> Transfer is not complete (1 bit)
 
 <p align="center">
  <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_57.JPG" width=50% height=50%>
