@@ -562,10 +562,10 @@ Outputs:
 - commands -> Commands (containing CS#, RAS#, CAS# and WE# details) needed by SDRAM (4 bits)
 - banks -> Selection of banks (2 bits)
 - address -> Address line (12 bits)
-- output_data -> Output read data (16 bits)
-- valid -> Read valid signal (data ready) (1 bit)
-- end -> Read operation end signal (1 bit)
-- 
+- apply_data -> Indicates when the controller is ready to accept new data (1 bit)
+- wr_dqm_out -> Data Mask Output (1 bit)
+- end -> Write operation end signal (1 bit)
+- data_written -> Data to be driven to SDRAM (16 bits)
 
 <p align="center">
  <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_58.JPG" width=25% height=25%>
