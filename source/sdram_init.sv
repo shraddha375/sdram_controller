@@ -30,10 +30,13 @@ module sdram_init (
     output reg  [11:0] init_addr,   // Address Bus
     output wire        init_done    // Initialization Done Flag
 );
+
+    // ----------------------------------------------------------------------------------------------------------------------------------------
  
-    // ----------------------------------------------------
-    // Power-On Delay Counter: Wait 150us (required by SDRAM)
-    // ----------------------------------------------------
+    // --------------------------------------------------------------------
+    // Power-On Delay Counter: Wait 150us (required by SDRAM) - Counter 1
+    // --------------------------------------------------------------------
+
     // Cycle period = 10ns
     parameter count_power_on = 14'd15000;  // 150us / 10ns = 15000 clock cycles
     reg  [13:0] count_150us;               // Counter used to keep track of 15000 cycles
@@ -49,7 +52,11 @@ module sdram_init (
     end
  
     assign power_on_wait_done = (count_150us == count_power_on); // Marks the completion of 150us time period
- 
+
+    // ----------------------------------------------------------------------------------------------------------------------------------------
+
+    reg [2:0] init_state;       // FSM State Register
+
     // ----------------------------------------------------
     // FSM State Encoding
     // ----------------------------------------------------
@@ -62,24 +69,12 @@ module sdram_init (
               WAIT_TMRD       = 3'd6, // Mode register wait state
               INIT_DONE       = 3'd7; // Initialization complete state
  
-    reg [2:0] init_state;       // FSM State Register
- 
-    // ----------------------------------------------------
-    // Clock Cycle Counter for TRP, TRFC, TMRD Waits
-    // ----------------------------------------------------
+    // ----------------------------------------------------------------------------------------------------------------------------------------
+
     // Use a single counter to keep track of different time periods
     reg  [2:0] count_clock; // maximum clock cycle wait is 7
     reg        rst_clock_count; // reset enabled when that the number of cycles required by each time period completes
- 
-    always @(posedge sys_clk or negedge sys_rst_n) begin
-        if (!sys_rst_n)
-            count_clock <= 3'd0;
-        else if (rst_clock_count) // From other part of the logic, because the same counter is being used by many 
-            count_clock <= 3'd0;
-        else if (count_clock != 3'd7)  // Avoid overflow
-            count_clock <= count_clock + 1'b1;
-    end
- 
+
     // ----------------------------------------------------
     // Wait Completion Flags Based on SDRAM Timing Constraints
     // ----------------------------------------------------
@@ -106,7 +101,22 @@ module sdram_init (
             default     : rst_clock_count = 1'b1;
         endcase
     end
- 
+
+    // ----------------------------------------------------------
+    // Clock Cycle Counter for TRP, TRFC, TMRD Waits - Counter 2
+    // ----------------------------------------------------------
+    
+    always @(posedge sys_clk or negedge sys_rst_n) begin
+        if (!sys_rst_n)
+            count_clock <= 3'd0;
+        else if (rst_clock_count) // From other part of the logic, because the same counter is being used by many 
+            count_clock <= 3'd0;
+        else if (count_clock != 3'd7)  // Avoid overflow
+            count_clock <= count_clock + 1'b1;
+    end
+
+    // ----------------------------------------------------------------------------------------------------------------------------------------
+
     // ----------------------------------------------------
     // Auto-Refresh Counter: 8 Auto-Refresh Cycles Required
     // ----------------------------------------------------
@@ -166,7 +176,9 @@ module sdram_init (
  
     // Initialization Done Flag
     assign init_done = (init_state == INIT_DONE);
- 
+    
+    // ----------------------------------------------------------------------------------------------------------------------------------------
+
     // ----------------------------------------------------
     // SDRAM Command, Address, and Bank Address Control
     // ----------------------------------------------------
@@ -216,6 +228,3 @@ module sdram_init (
     end
  
 endmodule
- 
-
-
