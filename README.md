@@ -489,6 +489,8 @@ Outputs:
 </p>
 
 
+Read transaction may have to be stopped in order to do auto-refresh, the below module can handle breaking the transactions midway.
+
 <p align="center">
  <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_53.JPG" width=100% height=100%>
 </p>
@@ -573,6 +575,7 @@ Outputs:
  <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_58.JPG" width=25% height=25%>
 </p>
 
+Write transaction may have to be stopped in order to do auto-refresh, the below module can handle breaking the transactions midway.
 
 <p align="center">
  <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_55.JPG" width=100% height=100%>
