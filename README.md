@@ -542,6 +542,8 @@ The starting column and bank addresses are provided with the WRITE command, and 
  <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_56.JPG" width=100% height=100%>
 </p>
 
+Read Module consists of:
+- FSM that changes states: IDLE -> ACTIVE -> WAIT_ACTIVE -> START_WRITE -> WRITING -> WAIT_TWR -> PRECHARGE -> WAIT_PRECHARGE -> COMPLETE
 
 <p align="center">
  <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_54.JPG" width=100% height=100%>
