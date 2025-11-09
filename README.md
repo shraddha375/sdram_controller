@@ -524,16 +524,16 @@ The starting column and bank addresses are provided with the WRITE command, and 
 
 
 <p align="center">
- <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_54.JPG" width=50% height=50%>
+ <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_54.JPG" width=100% height=100%>
 </p>
 
 <p align="center">
- <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_58.JPG" width=50% height=25%>
+ <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_58.JPG" width=25% height=25%>
 </p>
 
 
 <p align="center">
- <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_55.JPG" width=50% height=50%>
+ <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_55.JPG" width=100% height=100%>
 </p>
 
 
