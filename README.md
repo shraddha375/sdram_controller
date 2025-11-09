@@ -493,6 +493,48 @@ The module is responsible for writing to the SDRAM. The WRITE command is used to
 
 The starting column and bank addresses are provided with the WRITE command, and auto precharge is either enabled or disabled for that access. During WRITE bursts, the first valid data-in element will be registered coincident with the WRITE command. Subsequent data elements will be registered on each successive positive clock edge.
 
+
+
+<p align="center">
+ <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_51.png" width=50% height=50%>
+</p>
+
+<p align="center">
+ <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_52.png" width=50% height=50%>
+</p>
+
+<p align="center">
+ <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_53.JPG" width=50% height=50%>
+</p>
+
+<p align="center">
+ <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_54.JPG" width=50% height=50%>
+</p>
+
+<p align="center">
+ <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_55.JPG" width=50% height=50%>
+</p>
+
+<p align="center">
+ <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_56.JPG" width=50% height=50%>
+</p>
+
+<p align="center">
+ <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_57.JPG" width=50% height=50%>
+</p>
+
+<p align="center">
+ <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_58.JPG" width=50% height=50%>
+</p>
+
+<p align="center">
+ <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_59.JPG" width=50% height=50%>
+</p>
+
+<p align="center">
+ <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_60.JPG" width=50% height=50%>
+</p>
+
 ### Commands
 <p align="center">
 <img src="https://github.com/shraddha375/sdram_controller/blob/main/images/image_25.jpg" width=50% height=50%>
